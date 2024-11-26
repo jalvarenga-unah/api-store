@@ -15,6 +15,14 @@ const PORT = process.env.PORT || 3000
 //Rutas
 app.use('/auth', authRouter)
 app.use('/users', userRouter)
+app.get('/saludo/:nombre', (req, res) => {
+
+    const { nombre } = req.params
+
+    res.json({
+        "message": `Hola ${nombre}`
+    })
+})
 
 // Middleware para manejo de rutas inexistentes
 app.use((req, res) => {
