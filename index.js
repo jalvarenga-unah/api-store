@@ -2,7 +2,7 @@ import express, { json } from 'express'
 import userRouter from './router/users.js'
 import authRouter from './router/auth.js'
 import { corsMiddleware } from './middlewares/cors.js'
-import 'dotenv/config'
+
 const app = express() // instance de express (createServer)
 
 //Middleware
